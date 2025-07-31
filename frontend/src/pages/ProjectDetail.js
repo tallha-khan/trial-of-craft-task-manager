@@ -25,6 +25,7 @@ export default function ProjectDetail() {
   const fetchTasks = async () => {
     const res = await axios.get(`https://trial-of-craft-task-manager.onrender.com/api/tasks/${projectId}`, {
       headers: { Authorization: `Bearer ${token}` },
+      withCredentials: true
     });
     
     setTasks(res.data);
@@ -38,6 +39,7 @@ export default function ProjectDetail() {
     e.preventDefault();
     await axios.get(`https://trial-of-craft-task-manager.onrender.com/api/tasks/${projectId}`, {
       headers: { Authorization: `Bearer ${token}` },
+      withCredentials: true
     });
     
     setForm({ title: '', dueDate: '' });
@@ -51,6 +53,7 @@ export default function ProjectDetail() {
         status: task.status,
       }, {
         headers: { Authorization: `Bearer ${token}` },
+        withCredentials: true
       });
       fetchTasks();
     } catch (err) {
@@ -63,6 +66,7 @@ export default function ProjectDetail() {
     try {
       await axios.delete(`https://trial-of-craft-task-manager.onrender.com/api/tasks/${taskId}`, {
         headers: { Authorization: `Bearer ${token}` },
+        withCredentials: true
       });
       fetchTasks();
     } catch (err) {
