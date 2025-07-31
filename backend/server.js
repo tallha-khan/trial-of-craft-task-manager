@@ -15,7 +15,7 @@ const allowedOrigins = [
   'https://trial-of-craft-task-manager.vercel.app'
 ];
 
-const corsOptions = {
+app.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
@@ -23,16 +23,10 @@ const corsOptions = {
       callback(new Error('Not allowed by CORS'));
     }
   },
-  credentials: true,
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
-  allowedHeaders: ['Content-Type', 'Authorization'],
-};
+  credentials: true
+}));
 
-// Apply CORS to all routes
-app.use(cors(corsOptions));
 
-// Explicitly handle preflight requests
-app.options('*', cors(corsOptions));
 
 
 app.use(express.json());

@@ -23,6 +23,7 @@ export default function Projects() {
   const fetchProjects = async () => {
     const res = await axios.get('https://trial-of-craft-task-manager.onrender.com/api/projects', {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+      withCredentials: true
     });
     setProjects(res.data);
   };
@@ -35,6 +36,7 @@ export default function Projects() {
     e.preventDefault();
     await axios.post('https://trial-of-craft-task-manager.onrender.com/api/projects', form, {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+      withCredentials: true
     });
     setForm({ title: '', description: '' });
     fetchProjects();
