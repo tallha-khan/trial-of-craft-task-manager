@@ -16,7 +16,8 @@ export default function Login({ onLogin }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', form);
+      const res = await axios.post('https://trial-of-craft-task-manager.onrender.com
+/api/auth/login', form);
       setUser(res.data.user);
 
       localStorage.setItem('token', res.data.token);

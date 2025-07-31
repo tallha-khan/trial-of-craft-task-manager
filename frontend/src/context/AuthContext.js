@@ -10,7 +10,8 @@ export const AuthProvider = ({ children }) => {
     const token = localStorage.getItem('token');
     if (token) {
       try {
-        const res = await axios.get('http://localhost:5000/api/auth/me', {
+        const res = await axios.get('https://trial-of-craft-task-manager.onrender.com
+/api/auth/me', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUser(res.data);
