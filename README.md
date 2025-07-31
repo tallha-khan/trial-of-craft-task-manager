@@ -39,3 +39,17 @@ npm start
 
 ✍️ Author
 Talha Mohammed Khan
+
+#### render backend deployed url
+
+https://trial-of-craft-task-manager.onrender.com
+
+### vercel frontend deployed url
+
+https://trial-of-craft-task-manager.vercel.app/
+
+### Deployment link
+
+### click the below link to view the website
+
+https://trial-of-craft-task-manager.vercel.app/
