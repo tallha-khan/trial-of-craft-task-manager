@@ -21,8 +21,7 @@ export default function Projects() {
     navigate('/dashboard'); // make sure this route exists
   };
   const fetchProjects = async () => {
-    const res = await axios.get('https://trial-of-craft-task-manager.onrender.com
-/api/projects', {
+    const res = await axios.get('https://trial-of-craft-task-manager.onrender.com/api/projects', {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
     });
     setProjects(res.data);
@@ -34,8 +33,7 @@ export default function Projects() {
 
   const createProject = async (e) => {
     e.preventDefault();
-    await axios.post('https://trial-of-craft-task-manager.onrender.com
-/api/projects', form, {
+    await axios.post('https://trial-of-craft-task-manager.onrender.com/api/projects', form, {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
     });
     setForm({ title: '', description: '' });
