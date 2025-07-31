@@ -6,7 +6,7 @@
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 86, 210, 0.1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-sizing: border-box;
+  
 }
 
 .projects-container h2 {
@@ -29,7 +29,7 @@
   border-radius: 6px;
   font-size: 14px;
   line-height: 1.4;
-  box-sizing: border-box;
+
 }
 
 .projects-container button {
