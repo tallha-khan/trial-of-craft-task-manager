@@ -48,7 +48,7 @@ export default function Projects() {
         <button onClick={goToDashboard}>← Back to Dashboard</button>
         <button onClick={handleLogout}>Logout</button>
       </div>
-      <h2>Create a new Projects</h2>
+      <h2>Create a new Project</h2>
       <form onSubmit={createProject}>
         <input name="title" placeholder="Project title" value={form.title} onChange={e => setForm({ ...form, title: e.target.value })} />
         <input name="description" placeholder="Description" value={form.description} onChange={e => setForm({ ...form, description: e.target.value })} />
