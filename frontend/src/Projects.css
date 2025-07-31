@@ -1,31 +1,35 @@
 .projects-container {
   max-width: 700px;
-  margin: 80px auto;
-  padding: 40px;
+  margin: 40px auto;
+  padding: 24px;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 86, 210, 0.1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 
 .projects-container h2 {
   color: #0056d2;
-  margin-bottom: 24px;
-  font-size: 28px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
 }
 
 .projects-container form {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .projects-container input {
-  padding: 10px;
+  padding: 10px 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 1.4;
+  box-sizing: border-box;
 }
 
 .projects-container button {
@@ -34,7 +38,7 @@
   color: white;
   border: none;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -46,6 +50,7 @@
 .projects-container ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .projects-container li {
@@ -61,4 +66,22 @@
 
 .projects-container a:hover {
   color: #003c9e;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 600px) {
+  .projects-container {
+    margin: 20px;
+    padding: 16px;
+  }
+
+  .projects-container h2 {
+    font-size: 20px;
+  }
+
+  .projects-container input,
+  .projects-container button {
+    font-size: 14px;
+    padding: 10px;
+  }
 }

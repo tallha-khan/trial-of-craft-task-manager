@@ -50,3 +50,20 @@
   border: none;
   cursor: pointer;
 }
+
+/* ✅ Responsive tweaks for smaller screens */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 20px 16px;
+    margin: 40px auto;
+  }
+
+  .login-container h2 {
+    font-size: 20px;
+  }
+
+  .button1, .button2 {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
