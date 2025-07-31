@@ -10,9 +10,7 @@ exports.createTask = async (req, res) => {
       project: req.body.project,
       createdBy: req.user,
     });
-    if (req.body.assignedTo) {
-      taskData.assignedTo = req.body.assignedTo;
-    }
+
     res.json(task);
   } catch (err) {
     res.status(500).json({ msg: 'Error creating task' });

@@ -12,7 +12,7 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://trial-of-craft-task-manager.onrender.com/api/auth/signup', form);
+      const res = await axios.post('https://trial-of-craft-task-manager.onrender.com/api/auth/signup', form ,{ withCredentials: true });
       console.log(res.data);
       alert('Signup successful!');
       navigate('/login');

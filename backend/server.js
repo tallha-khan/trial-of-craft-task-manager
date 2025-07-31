@@ -10,17 +10,20 @@ connectDB();
 
 const app = express();
 
-const allowedOrigins = [
-  'http://localhost:3000',
-  'https://trial-of-craft-task-manager.vercel.app'
-];
 
 app.use(express.json());
 
 
 
 
-const corsOptions = {
+const cors = require('cors');
+
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://trial-of-craft-task-manager.vercel.app',
+];
+
+app.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
@@ -29,10 +32,8 @@ const corsOptions = {
     }
   },
   credentials: true
-};
+}));
 
-app.use(cors(corsOptions));
-app.options('*', cors(corsOptions)); // this line is crucial
 
 
 
