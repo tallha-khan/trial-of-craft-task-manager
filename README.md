@@ -12,9 +12,17 @@ A full-stack task management app built with the MERN stack.
 ## 🚀 Features
 
 - User signup/login (JWT-based)
-- Create, assign, and manage projects
-- Add tasks within projects
 - Dashboard overview
+- Create and manage projects
+- Add tasks within projects
+
+### Flow of the project
+
+-create an account on signup page
+-login to your account with the created credentials
+-after logging in You will be redirected to the dashboard page where We can see the details of the user and a link to project page where we can create the projects.
+-On the projects page ,create a project, You will see your created project at the bottom of the page, clink on the project you created.
+-you will be redirected to the tasks page related to that project, in this page we can create tasks related to the project and manage there status(To Do,In Progress,Completed).
 
 ## 🛠️ Setup Instructions
 
