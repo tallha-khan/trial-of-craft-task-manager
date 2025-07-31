@@ -37,14 +37,24 @@ export default function ProjectDetail() {
 
   const createTask = async (e) => {
     e.preventDefault();
-    await axios.get(`https://trial-of-craft-task-manager.onrender.com/api/tasks/${projectId}`, {
-      headers: { Authorization: `Bearer ${token}` },
-      withCredentials: true
-    });
-    
-    setForm({ title: '', dueDate: '' });
-    fetchTasks();
+    try {
+      await axios.post('https://trial-of-craft-task-manager.onrender.com/api/tasks', {
+        title: form.title,
+        dueDate: form.dueDate,
+        project: projectId, // required to associate the task
+        status: 'todo' // default status if not chosen in form
+      }, {
+        headers: { Authorization: `Bearer ${token}` },
+        withCredentials: true
+      });
+  
+      setForm({ title: '', dueDate: '' });
+      fetchTasks();
+    } catch (err) {
+      alert('Error creating task');
+    }
   };
+  
 
   const updateTask = async (task) => {
     try {
