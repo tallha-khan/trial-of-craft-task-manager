@@ -15,6 +15,8 @@ const allowedOrigins = [
   'https://trial-of-craft-task-manager.vercel.app'
 ];
 
+app.use(express.json());
+
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
@@ -27,9 +29,22 @@ app.use(cors({
 }));
 
 
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); // this line is crucial
 
 
-app.use(express.json());
+
 
 
 app.use('/api/auth', require('./routes/auth'));
