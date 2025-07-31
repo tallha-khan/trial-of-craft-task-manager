@@ -130,8 +130,8 @@ export default function ProjectDetail() {
             <span style={{ marginLeft: '10px' }}>
               📅 {new Date(task.dueDate).toLocaleDateString()}
             </span>
-            <button onClick={() => updateTask(task)}>💾</button>
-            <button onClick={() => deleteTask(task._id)}>🗑</button>
+            <button onClick={() => updateTask(task)}>Save</button>
+            <button onClick={() => deleteTask(task._id)}>Delete</button>
           </li>
         ))}
       </ul>
