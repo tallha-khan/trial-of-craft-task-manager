@@ -28,18 +28,26 @@ A full-stack task management app built with the MERN stack.
 
 ### Backend
 
+### On Terminal Run
+
 cd backend
 npm install
 
-# Create a .env file with your MongoDB URI and JWT_SECRET
+# Create a .env file with your MongoDB URI and JWT_SECRET in your backend directory
+
+# Add this into you .env file with your mongodb uri
 
 MONGO_URI=Your_Mongo_URL
 JWT_SECRET=supersecretkey
 PORT=5000
 
+### Then On terminal Run
+
 npm start
 
 #### Frontend
+
+### On Terminal Run
 
 cd frontend
 npm install
