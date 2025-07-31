@@ -1,0 +1,64 @@
+.projects-container {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 86, 210, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.projects-container h2 {
+  color: #0056d2;
+  margin-bottom: 24px;
+  font-size: 28px;
+}
+
+.projects-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.projects-container input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.projects-container button {
+  padding: 10px;
+  background-color: #0056d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.projects-container button:hover {
+  background-color: #0041a8;
+}
+
+.projects-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.projects-container li {
+  margin-bottom: 14px;
+}
+
+.projects-container a {
+  text-decoration: none;
+  color: #0056d2;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.projects-container a:hover {
+  color: #003c9e;
+}
