@@ -10,12 +10,13 @@ connectDB();
 
 const app = express();
 
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://trial-of-craft-task-manager.vercel.app'
+];
+
 const corsOptions = {
   origin: function (origin, callback) {
-    const allowedOrigins = [
-      'http://localhost:3000',
-      'https://trial-of-craft-task-manager.vercel.app'
-    ];
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
@@ -23,15 +24,15 @@ const corsOptions = {
     }
   },
   credentials: true,
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  allowedHeaders: 'Content-Type,Authorization'
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+  allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
+// Apply CORS to all routes
 app.use(cors(corsOptions));
 
-// Optional but recommended for complex requests
+// Explicitly handle preflight requests
 app.options('*', cors(corsOptions));
-
 
 
 app.use(express.json());
